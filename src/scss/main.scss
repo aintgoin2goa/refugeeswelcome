@@ -1,0 +1,207 @@
+@import "meyer-reset";
+@import "bourbon/bourbon";
+
+@include font-face('shenzhenindustrial', 'fonts/shenzhenindustrial');
+
+$title-font: 'shenzhenindustrial', sans-serif;
+$XL: 1200px;
+$L: 1024px;
+$M: 600px;
+$S: 300px;
+
+$red: #B02427;
+
+@mixin addTexture($color){
+  background:$color url(images/texture.png) left top repeat;
+}
+
+@mixin addInvertedTexture($color){
+  background:$color url(images/inverted-texture.png) left top repeat;
+}
+
+@mixin respondTo($size){
+	@media screen and (min-width: $size) {
+	  @content;
+	}
+}
+
+
+
+body{
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size:16px;
+  line-height: 1.2em;
+  @include addTexture($red);
+}
+
+.container{
+  @include addInvertedTexture(white);
+  padding-bottom:20px;
+
+  @include respondTo($L){
+	margin:20px;
+  }
+}
+
+
+
+b{
+  font-weight: bold;
+}
+
+i{
+  font-style: italic;
+}
+
+a{
+  color:$red;
+  text-decoration: underline;
+}
+
+.button{
+  font-family: $title-font;
+  color: white;
+  padding:5px 20px;
+  border-radius: 0.25em;
+  @include addTexture(black);
+  text-decoration: none;
+  box-shadow: 2px 2px 2px black;
+  transition: all 250ms ease-out;
+
+  &:hover{
+	opacity:0.8;
+	box-shadow: 2px 2px 5px black;
+  }
+
+  &.standout{
+	@include addTexture($red);
+  }
+}
+
+header{
+  height:177px;
+  width:100%;
+  @include addTexture(black);
+  position: relative;
+
+  h1{
+	box-sizing: border-box;
+	height:125px;
+	width: 280px;
+	text-indent:-9999px;
+	margin-left:0px;
+	background: url(images/logo.png) left top no-repeat;
+	background-size: 100%;
+
+	@include respondTo($M){
+	  height:157px;
+	  width: 352px;
+	  margin-left:40px;
+	}
+  }
+
+  .ssm-logo{
+	width:116px;
+	height:150px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	background: url(images/ssm-logo.png) center center no-repeat;
+	display: none;
+
+	@include respondTo($M){
+	  display: block;
+	}
+  }
+}
+
+section{
+
+  & > *{
+	box-sizing: border-box;
+	padding:0 20px;
+	max-width: 800px;
+
+	@include respondTo($L){
+	  padding:0 40px;
+	}
+  }
+
+  margin:20px 0 40px 0;
+  line-height:1.5em;
+
+  h1{
+	font-size: 4em;
+	margin-bottom: 0.1em;
+	line-height: 1em;
+	font-family: $title-font;
+	padding-top:10px;
+	padding-bottom: 10px;
+	color: #000;
+	max-width: 100%;
+  }
+  h3{
+	font-size: 1.4em;
+	margin-bottom:0.5em;
+  }
+
+  p{
+	margin:0.5em 0;
+  }
+
+  ul{
+
+	list-style-type: disc;
+	list-style-position: outside;
+	margin-left:20px;
+  }
+
+  ol{
+	list-style-type:decimal;
+	list-style-position: outside;
+	margin-left: 20px;
+  }
+}
+
+dl{
+  width:100%;
+  overflow: hidden;
+  margin-bottom:0;
+  padding-bottom: 10px;
+
+
+  dt{
+	float:left;
+	margin-right: 20px;
+	font-style: italic;
+	width:100%;
+
+	@include respondTo($M){
+	  width:40%;
+	}
+  }
+
+  dd{
+	float:left;
+	line-height: 1em;
+
+	@include respondTo($M){
+	  line-height: 1.2em;
+	}
+  }
+}
+
+.strip p{
+  padding:0 0 0 20px;
+  float:left;
+
+  @include respondTo($M){
+	float: right;
+	padding:0 20px;
+  }
+}
+
+.strip {
+  width:100%;
+  overflow: hidden;
+}

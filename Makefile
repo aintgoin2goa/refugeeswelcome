@@ -8,7 +8,7 @@ install:
 
 build:
 	#./node_modules/.bin/browserify src/js/main.js -o dist/main.js -t babelify --debug
-	#./node_modules/.bin/node-sass src/scss/main.scss --output dist/
+	./node_modules/.bin/node-sass src/scss/main.scss --output dist/
 	cp src/index.html dist/index.html
 
 run:

@@ -1,0 +1,170 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "shenzhenindustrial";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/shenzhenindustrial.eot?#iefix") format("embedded-opentype"), url("fonts/shenzhenindustrial.woff2") format("woff2"), url("fonts/shenzhenindustrial.woff") format("woff"), url("fonts/shenzhenindustrial.ttf") format("truetype"), url("fonts/shenzhenindustrial.svg#shenzhenindustrial") format("svg"); }
+
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  background: #B02427 url(images/texture.png) left top repeat; }
+
+.container {
+  background: white url(images/inverted-texture.png) left top repeat;
+  padding-bottom: 20px; }
+  @media screen and (min-width: 1024px) {
+    .container {
+      margin: 20px; } }
+
+b {
+  font-weight: bold; }
+
+i {
+  font-style: italic; }
+
+a {
+  color: #B02427;
+  text-decoration: underline; }
+
+.button {
+  font-family: "shenzhenindustrial", sans-serif;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 0.25em;
+  background: black url(images/texture.png) left top repeat;
+  text-decoration: none;
+  box-shadow: 2px 2px 2px black;
+  transition: all 250ms ease-out; }
+  .button:hover {
+    opacity: 0.8;
+    box-shadow: 2px 2px 5px black; }
+  .button.standout {
+    background: #B02427 url(images/texture.png) left top repeat; }
+
+header {
+  height: 177px;
+  width: 100%;
+  background: black url(images/texture.png) left top repeat;
+  position: relative; }
+  header h1 {
+    box-sizing: border-box;
+    height: 125px;
+    width: 280px;
+    text-indent: -9999px;
+    margin-left: 0px;
+    background: url(images/logo.png) left top no-repeat;
+    background-size: 100%; }
+    @media screen and (min-width: 600px) {
+      header h1 {
+        height: 157px;
+        width: 352px;
+        margin-left: 40px; } }
+  header .ssm-logo {
+    width: 116px;
+    height: 150px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: url(images/ssm-logo.png) center center no-repeat;
+    display: none; }
+    @media screen and (min-width: 600px) {
+      header .ssm-logo {
+        display: block; } }
+
+section {
+  margin: 20px 0 40px 0;
+  line-height: 1.5em; }
+  section > * {
+    box-sizing: border-box;
+    padding: 0 20px;
+    max-width: 800px; }
+    @media screen and (min-width: 1024px) {
+      section > * {
+        padding: 0 40px; } }
+  section h1 {
+    font-size: 4em;
+    margin-bottom: 0.1em;
+    line-height: 1em;
+    font-family: "shenzhenindustrial", sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000;
+    max-width: 100%; }
+  section h3 {
+    font-size: 1.4em;
+    margin-bottom: 0.5em; }
+  section p {
+    margin: 0.5em 0; }
+  section ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 20px; }
+  section ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-left: 20px; }
+
+dl {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 10px; }
+  dl dt {
+    float: left;
+    margin-right: 20px;
+    font-style: italic;
+    width: 100%; }
+    @media screen and (min-width: 600px) {
+      dl dt {
+        width: 40%; } }
+  dl dd {
+    float: left;
+    line-height: 1em; }
+    @media screen and (min-width: 600px) {
+      dl dd {
+        line-height: 1.2em; } }
+
+.strip p {
+  padding: 0 0 0 20px;
+  float: left; }
+  @media screen and (min-width: 600px) {
+    .strip p {
+      float: right;
+      padding: 0 20px; } }
+
+.strip {
+  width: 100%;
+  overflow: hidden; }
