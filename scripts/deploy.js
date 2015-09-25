@@ -29,7 +29,7 @@ function getContentType(filename){
 function uploadFile(file){
 	console.log('createreadystream', file);
 	var stream = fs.createReadStream(file);
-	var key = file.replace(process.cwd, '');
+	var key = file.replace(process.cwd()+'/dist/', '');
 
 	console.log('upload %s', key);
 
