@@ -1,37 +1,61 @@
 nav{
-  	box-sizing: border-box;
-	padding:20px;
-  	background-color:white;
+  @include addTexture(black);
 
-  @include respondTo($M){
-	width:40%;
-	float:left;
+  ul{
+	margin:0;
+	padding:0;
+	list-style-type: none;
   }
 
+  li{
+	display: inline-block;
+	min-width:25%;
+  }
 
-  	a {
-	  display:inline-block;
-	  margin-right:1em;
+  a{
+	font-family: $title-font;
+	color:white;
+	display: block;
+	padding: 1em 1em 0.5em 1em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-size:1.5em;
+  }
+
+  a:hover{
+	color:$red;
+  }
+
+  a.current, a.current:hover{
+	color:$red;
+  }
+
+  @include respondTo($M){
+	margin-top:1em;
+
+
+	ul{
+	  padding:1em 0;
+	  transform: translateX(50px);
 	}
-}
 
-.strip p{
-  padding:0 0 0 20px;
-  float:left;
+	li{
+	  min-width: 0;
+	}
 
-  @include respondTo($M){
-	float:right;
-  }
-}
+	a{
+	  padding:0;
+	}
 
-.strip {
-  box-sizing: border-box;
-  width:100%;
-  overflow: hidden;
+	a:before{
+	  content: '|';
+	  color: $red;
+	  display: inline-block;
+	  margin: 0 1em;
+	}
 
-  @include respondTo($M){
-	float: right;
-	padding:0 20px;
-	width:60%;
+	li:first-child a:before{
+	  display: none;
+	}
   }
 }

@@ -1,0 +1,23 @@
+@include font-face('shenzhenindustrial', 'fonts/shenzhenindustrial');
+
+$title-font: 'shenzhenindustrial', sans-serif;
+$XL: 1200px;
+$L: 1024px;
+$M: 600px;
+$S: 300px;
+
+$red: #B02427;
+
+@mixin addTexture($color){
+  background:$color url(images/texture.png) left top repeat;
+}
+
+@mixin addInvertedTexture($color){
+  background:$color url(images/inverted-texture.png) left top repeat;
+}
+
+@mixin respondTo($size){
+  @media screen and (min-width: $size) {
+	@content;
+  }
+}

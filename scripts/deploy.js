@@ -14,7 +14,8 @@ var dist = path.resolve(__dirname, '../dist/');
 var foldersToUpload = [
 	dist,
 	path.resolve(dist, 'fonts/'),
-	path.resolve(dist, 'images/')
+	path.resolve(dist, 'images/'),
+	path.resolve(dist, 'js/')
 ];
 
 function getContentType(filename){

@@ -1,29 +1,6 @@
 @import "meyer-reset";
 @import "bourbon/bourbon";
-
-@include font-face('shenzhenindustrial', 'fonts/shenzhenindustrial');
-
-$title-font: 'shenzhenindustrial', sans-serif;
-$XL: 1200px;
-$L: 1024px;
-$M: 600px;
-$S: 300px;
-
-$red: #B02427;
-
-@mixin addTexture($color){
-  background:$color url(images/texture.png) left top repeat;
-}
-
-@mixin addInvertedTexture($color){
-  background:$color url(images/inverted-texture.png) left top repeat;
-}
-
-@mixin respondTo($size){
-	@media screen and (min-width: $size) {
-	  @content;
-	}
-}
+@import "mixins";
 
 
 
@@ -79,7 +56,6 @@ a{
 }
 
 header{
-  height:177px;
   width:100%;
   @include addTexture(black);
   position: relative;
@@ -193,6 +169,40 @@ dl{
 	  line-height: 1.2em;
 	}
   }
+}
+
+ul.contact{
+  list-style-type: none;
+  padding:0;
+
+  @include respondTo($L){
+	margin-left:40px;
+  }
+
+  li{
+	margin:0;
+	padding:0 0 0 50px;
+	height:30px;
+	line-height: 30px;
+	margin-bottom:20px;
+  }
+
+  .facebook{
+	background:url(images/facebook_logo.png) left center no-repeat;
+  }
+
+  .twitter{
+	background:url(images/twitter_logo.png) left center no-repeat;
+  }
+
+  .email{
+	background:url(images/email_icon.png) left center no-repeat;
+  }
+}
+
+.strip p{
+  display: inline-block;
+  margin-right:10px;
 }
 
 

@@ -75,7 +75,6 @@ a {
     background: #B02427 url(images/texture.png) left top repeat; }
 
 header {
-  height: 177px;
   width: 100%;
   background: black url(images/texture.png) left top repeat;
   position: relative; }
@@ -160,31 +159,64 @@ dl {
       dl dd {
         line-height: 1.2em; } }
 
-nav {
-  box-sizing: border-box;
-  padding: 20px;
-  background-color: white; }
-  @media screen and (min-width: 600px) {
-    nav {
-      width: 40%;
-      float: left; } }
-  nav a {
-    display: inline-block;
-    margin-right: 1em; }
+ul.contact {
+  list-style-type: none;
+  padding: 0; }
+  @media screen and (min-width: 1024px) {
+    ul.contact {
+      margin-left: 40px; } }
+  ul.contact li {
+    margin: 0;
+    padding: 0 0 0 50px;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 20px; }
+  ul.contact .facebook {
+    background: url(images/facebook_logo.png) left center no-repeat; }
+  ul.contact .twitter {
+    background: url(images/twitter_logo.png) left center no-repeat; }
+  ul.contact .email {
+    background: url(images/email_icon.png) left center no-repeat; }
 
 .strip p {
-  padding: 0 0 0 20px;
-  float: left; }
-  @media screen and (min-width: 600px) {
-    .strip p {
-      float: right; } }
+  display: inline-block;
+  margin-right: 10px; }
 
-.strip {
-  box-sizing: border-box;
-  width: 100%;
-  overflow: hidden; }
+nav {
+  background: black url(images/texture.png) left top repeat; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  nav li {
+    display: inline-block;
+    min-width: 25%; }
+  nav a {
+    font-family: "shenzhenindustrial", sans-serif;
+    color: white;
+    display: block;
+    padding: 1em 1em 0.5em 1em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 1.5em; }
+  nav a:hover {
+    color: #B02427; }
+  nav a.current, nav a.current:hover {
+    color: #B02427; }
   @media screen and (min-width: 600px) {
-    .strip {
-      float: right;
-      padding: 0 20px;
-      width: 60%; } }
+    nav {
+      margin-top: 1em; }
+      nav ul {
+        padding: 1em 0;
+        transform: translateX(50px); }
+      nav li {
+        min-width: 0; }
+      nav a {
+        padding: 0; }
+      nav a:before {
+        content: '|';
+        color: #B02427;
+        display: inline-block;
+        margin: 0 1em; }
+      nav li:first-child a:before {
+        display: none; } }
